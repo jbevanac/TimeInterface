@@ -11,5 +11,10 @@
     "minimum-stability": "dev",
     "require": {
         "php" : "7.4.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jbevanac\\TimeInterface\\": "src/"
+        }
     }
 }
