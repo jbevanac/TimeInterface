@@ -1,26 +1,15 @@
 {
-  "name": "jbevanac/time-interface",
-  "config": {
-    "platform": {
-      "php": "7.4.5"
+    "name": "jonathanbevan/time-interface",
+    "type": "library",
+    "description": "Converts hours, minutes and seconds into each other.",
+    "authors": [
+        {
+            "name": "jbevanac",
+            "email": "62661464+jbevanac@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php" : "7.4.5"
     }
-  },
-  "autoload": {
-    "psr-4": {
-      "Jbevanac\\TimeInterface\\": "src/"
-    }
-  },
-  "type": "library",
-  "description": "Converts hours, minutes and seconds into each other.",
-  "keywords": ["Hours","Minutes","Seconds","Conversion"],
-  "homepage": "https://yourcompany.com",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Jonathan Bevan",
-      "email": "jonathan@nerdfactory.no",
-      "homepage": "",
-      "role": "Developer"
-    }
-  ]
 }
