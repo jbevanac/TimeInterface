@@ -1,5 +1,5 @@
 {
-  "name": "Jbevanac/time-interface",
+  "name": "jbevanac/time-interface",
   "config": {
     "platform": {
       "php": "7.4.5"
