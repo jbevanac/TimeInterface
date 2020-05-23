@@ -16,6 +16,15 @@ class Seconds implements TimeInterface
     {
         $this->seconds = $seconds;
     }
+
+    /**
+     * Set Value of seconds
+     * @param float $seconds
+     */
+    public function setSeconds(float $seconds): void
+    {
+        $this->seconds = $seconds;
+    }
     public static function create(float $seconds) : TimeInterface
     {
         return new Seconds($seconds);
@@ -33,7 +42,7 @@ class Seconds implements TimeInterface
     /* GET */
     public function getHours(): float
     {
-        return $this->seconds * self::IN_HOURS;
+        return round($this->seconds * self::IN_HOURS, 2);
     }
     public function getMinutes(): float
     {
@@ -44,6 +53,13 @@ class Seconds implements TimeInterface
         return $this->seconds;
     }
     /* STATIC */
+    public static function fromDateTime(\DateTimeInterface $dateTime): float
+    {
+        $hours = $dateTime->format("H");
+        $minutes = $dateTime->format("i");
+        return floatval(Hours::inSeconds($hours)) + floatval(Minutes::inSeconds($minutes));
+    }
+
     public static function inHours(float $seconds) : float {
         return $seconds * Seconds::IN_HOURS;
     }

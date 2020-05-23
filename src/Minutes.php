@@ -13,6 +13,15 @@ class Minutes implements TimeInterface
     {
         $this->minutes = $minutes;
     }
+
+    /**
+     * Sets Value of Minutes
+     * @param float $minutes
+     */
+    public function setMinutes(float $minutes): void
+    {
+        $this->minutes = $minutes;
+    }
     public static function create(float $minutes) : TimeInterface
     {
         return new Minutes($minutes);
@@ -42,6 +51,13 @@ class Minutes implements TimeInterface
         return round($this->minutes * self::IN_SECONDS);
     }
     /* STATIC */
+    public static function fromDateTime(\DateTimeInterface $dateTime): float
+    {
+        $hours = $dateTime->format("H");
+        $minutes = $dateTime->format("i");
+        return floatval(Hours::inMinutes($hours)) + floatval($minutes);
+    }
+
     public static function inHours(float $minutes) : float {
         return $minutes * Minutes::IN_HOURS;
     }

@@ -1,5 +1,5 @@
 {
-    "name": "jonathanbevan/time-interface",
+    "name": "jbevanac/time-interface",
     "type": "library",
     "description": "Converts hours, minutes and seconds into each other.",
     "authors": [
