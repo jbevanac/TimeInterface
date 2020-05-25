@@ -3,6 +3,7 @@
 
 namespace Jbevanac\TimeInterface;
 
+use \DateTimeInterface;
 
 class Seconds implements TimeInterface
 {
@@ -53,7 +54,7 @@ class Seconds implements TimeInterface
         return $this->seconds;
     }
     /* STATIC */
-    public static function fromDateTime(\DateTimeInterface $dateTime): float
+    public static function fromDateTime(DateTimeInterface $dateTime): float
     {
         $hours = $dateTime->format("H");
         $minutes = $dateTime->format("i");
@@ -61,7 +62,7 @@ class Seconds implements TimeInterface
     }
 
     public static function inHours(float $seconds) : float {
-        return $seconds * Seconds::IN_HOURS;
+        return round($seconds * Seconds::IN_HOURS, 2);
     }
     public static function inMinutes(float $seconds) : float{
         return $seconds * Seconds::IN_MINUTES;

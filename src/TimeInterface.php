@@ -1,6 +1,7 @@
 <?php
 namespace Jbevanac\TimeInterface;
 
+use DateTimeInterface;
 
 interface TimeInterface {
 
@@ -18,7 +19,7 @@ interface TimeInterface {
      */
     public static function create(float $time) : TimeInterface;
     /**
-     * Creates a TimeInferface from hours
+     * Creates a TimeInterface from hours
      * @param float $time
      * @return TimeInterface
      */
@@ -58,10 +59,10 @@ interface TimeInterface {
 
     /**
      * Returns the current time in decimal format
-     * @param \DateTimeInterface $dateTime
+     * @param DateTimeInterface $dateTime
      * @return float
      */
-    public static function fromDateTime(\DateTimeInterface $dateTime) : float;
+    public static function fromDateTime(DateTimeInterface $dateTime) : float;
     /**
      * Returns the time in hours
      * @param float $time

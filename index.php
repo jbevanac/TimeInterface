@@ -1,11 +1,13 @@
 <?php
 namespace Jbevanac\TimeInterface;
+
+use \DateTime;
 require "src/TimeInterface.php";
 require "src/Hours.php";
 require "src/Minutes.php";
 require "src/Seconds.php";
 
-$dateTime = new \DateTime("now");
+$dateTime = new DateTime("now");
 
 echo Hours::fromDateTime($dateTime) . " Hours<br>";
 echo Minutes::fromDateTime($dateTime) . " Minutes<br>";
